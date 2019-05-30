@@ -6,3 +6,6 @@ https://asciinema.org/a/Ns0ZRCMmSkIUrucgQG0rEbIXc
 
 #Test Coverage Badge
 <a href="https://codeclimate.com/github/nrsimkha/php-project-lvl1/test_coverage"><img src="https://api.codeclimate.com/v1/badges/da5900d6fb5c8f9bfbeb/test_coverage" /></a>
+
+#Travis CI Badge
+https://travis-ci.org/nrsimkha/php-project-lvl1.svg?branch=master

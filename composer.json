@@ -1,0 +1,13 @@
+{
+    "name": "sveta/hexlet_project1",
+    "bin": [
+        "bin/brain-games"
+      ],
+    "authors": [
+        {
+            "name": "Sveta",
+            "email": "sveta.budanaeva@gmail.com"
+        }
+    ],
+    "require": {}
+}

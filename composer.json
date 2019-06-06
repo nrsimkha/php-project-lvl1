@@ -1,5 +1,8 @@
 {
     "name": "sveta/hexlet_project1",
+    "description": "Игры с числами",
+    "type": "library",
+    "keywords": ["game", "even", "greatest common divisor", "prime number"],
     "bin": [
         "bin/brain-games",
         "bin/brain-even",

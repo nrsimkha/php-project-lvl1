@@ -12,7 +12,7 @@ function ProgressionGame()
 {
     hello();
     line('What number is missing in the progression?');
-    $first_name = run();
+    $FIRST_NAME = run();
     $n = 0;
     while ($n < 3) {
         $start = round(mt_rand(1, 100));
@@ -26,7 +26,7 @@ function ProgressionGame()
         $array[$missing] = "..";
         $questionRow = implode(' ', $array);
         $userAnswer = question($questionRow);
-        StdOut($userAnswer, $rightAnswer, $first_name, $n);
+        StdOut($userAnswer, $rightAnswer, $FIRST_NAME, $n);
         $n++;
     }
 }

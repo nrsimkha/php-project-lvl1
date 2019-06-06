@@ -7,18 +7,18 @@ use function BrainGames\Cli\run;
 //ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ_____________________
 
 //генерация ответа игроку
-function StdOut($userAnswer, $rightAnswer, $first_name, $n)
+function StdOut($userAnswer, $rightAnswer, $FIRST_NAME, $n)
 {
     if (AssumeEqual($userAnswer, $rightAnswer)) {
         if ($n == 2) {
-            line("Congratulations, {$first_name}!");
+            line("Congratulations, {$FIRST_NAME}!");
             exit;
         } else {
             line("Correct!");
         }
     } else {
         line("{$userAnswer} is wrong answer ;(. Correct answer was {$rightAnswer}.");
-        line("Let's try again, {$first_name}!");
+        line("Let's try again, {$FIRST_NAME}!");
         exit;
     }
 }

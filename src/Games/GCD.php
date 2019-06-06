@@ -11,7 +11,7 @@ function GCDGame()
 {
     hello();
     line('Find the greatest common divisor of given numbers.');
-    $first_name = run();
+    $FIRST_NAME = run();
     $n = 0;
     while ($n < 3) {
         $number_1 = RandomInt();
@@ -23,7 +23,7 @@ function GCDGame()
         
         if (AssumeEqual($userAnswer, $rightAnswer)) {
             if ($n == 2) {
-                line("Congratulations, {$first_name}!");
+                line("Congratulations, {$FIRST_NAME}!");
                 break;
             } else {
                 line("Correct!");
@@ -31,7 +31,7 @@ function GCDGame()
             }
         } else {
             line("{$userAnswer} is wrong answer ;(. Correct answer was {$rightAnswer}.");
-            line("Let's try again, {$first_name}!");
+            line("Let's try again, {$FIRST_NAME}!");
             break;
         }
     }

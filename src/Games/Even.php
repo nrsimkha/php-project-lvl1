@@ -8,21 +8,21 @@ use function BrainGames\Cli\run;
 function EvenGame()
 {
     $n = 0;
-    $first_name = run();
+    $FIRST_NAME = run();
     while ($n < 3) {
         $number = RandomInt();
         $userAnswer = question($number);
         $OppAnsw = OppositeAnswer($userAnswer);
         if (AssumeEqual($userAnswer, $number)) {
             if ($n == 2) {
-                line("Congratulations, {$first_name}!");
+                line("Congratulations, {$FIRST_NAME}!");
                 break;
             }
             line("Correct!");
             $n++;
         } else {
             line("{$userAnswer} is wrong answer ;(. Correct answer was {$OppAnsw}.");
-            line("Let's try again, {$first_name}!");
+            line("Let's try again, {$FIRST_NAME}!");
             break;
         }
     }

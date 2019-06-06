@@ -12,7 +12,7 @@ function CalcGame()
     $signs = ['+', '*', '-'];
     $n = 0;
     hello();
-    $first_name = run();
+    $FIRST_NAME = run();
     while ($n < 3) {
         $number_1 = RandomInt();
         $number_2 = RandomInt();
@@ -23,7 +23,7 @@ function CalcGame()
         
         if (AssumeEqual($userAnswer, $rightAnswer)) {
             if ($n == 2) {
-                line("Congratulations, {$first_name}!");
+                line("Congratulations, {$FIRST_NAME}!");
                 break;
             } else {
                 line("Correct!");
@@ -31,7 +31,7 @@ function CalcGame()
             }
         } else {
             line("{$userAnswer} is wrong answer ;(. Correct answer was {$rightAnswer}.");
-            line("Let's try again, {$first_name}!");
+            line("Let's try again, {$FIRST_NAME}!");
             break;
         }
     }

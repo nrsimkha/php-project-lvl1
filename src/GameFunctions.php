@@ -78,15 +78,13 @@ function GCD($number_1, $number_2)
 { 
     $int_1 = max($number_1, $number_2);
     $int_2 = min($number_1, $number_2);
-
+    $rem = $int_2;
     while($int_1 % $int_2 !== 0){
-        //$int_1 = max($number_1, $number_2);
-        //$int_2 = min($number_1, $number_2);
         $rem = $int_1 % $int_2;
-        echo "int_1={$int_1} int_2={$int_2} rem={$rem} /s";
+        //echo "int_1={$int_1} int_2={$int_2} rem={$rem} /s";
         $int_1 = $int_2;
         $int_2 = $rem;
-        echo "NEW int_1={$int_1} int_2={$int_2} rem={$rem} /s";
+        //echo "NEW int_1={$int_1} int_2={$int_2} rem={$rem} /s";
     }
     return $rem;
 }

@@ -10,13 +10,14 @@ use function BrainGames\GameFunc\{RandomInt,question,GCD, AssumeEqual};
 function GCDGame()
 {
     hello();
+    line('Find the greatest common divisor of given numbers.');
     $first_name = run();
     $n=0;
     while ($n < 3) {
-        //$number_1 = RandomInt();
-        //$number_2 = RandomInt();
-        $number_1 = 39;
-        $number_2 = 80;
+        $number_1 = RandomInt();
+        $number_2 = RandomInt();
+        //$number_1 = 39;
+        //$number_2 = 80;
         $rightAnswer = GCD($number_1, $number_2);
         $userAnswer = question("{$number_1} {$number_2}");
         

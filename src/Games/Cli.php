@@ -6,7 +6,7 @@
 function hello()
 {
     line('Welcome to the Brain Game!!');
-    line('What is the result of the expression?');
+    
 }
 
 function run()

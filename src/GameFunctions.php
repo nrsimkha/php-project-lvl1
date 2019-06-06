@@ -7,23 +7,21 @@ use function BrainGames\Cli\run;
 //ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ_____________________
 
 //генерация ответа игроку
-/*function StdOut($userAnswer, $rightAnswer, $first_name, $n){
+function StdOut($userAnswer, $rightAnswer, $first_name, $n)
+{
     if (AssumeEqual($userAnswer, $rightAnswer)) {
-        echo '77';
         if ($n == 2) {
             line("Congratulations, {$first_name}!");
-            return false;
-        }else{
-            echo '55';
+            exit;
+        } else {
             line("Correct!");
-            return true;
         }
     } else {
         line("{$userAnswer} is wrong answer ;(. Correct answer was {$rightAnswer}.");
         line("Let's try again, {$first_name}!");
-        return false;
+        exit;
     }
-}*/
+}
 
 //генерируем рандомное число от 1 до 100
 function RandomInt()

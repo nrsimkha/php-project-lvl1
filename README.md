@@ -12,3 +12,7 @@ https://travis-ci.org/nrsimkha/php-project-lvl1.svg?branch=master
 
 #аскинема установки и запуска игры brain-even
 https://asciinema.org/a/DmsCVL1GMxOrfDioA82Dry0qO
+
+#аскинема установки и запуска игры brain-calc
+https://asciinema.org/a/Z8JRqIGCku5RSd4yyAIgL024C
+

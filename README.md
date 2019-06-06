@@ -19,4 +19,8 @@ https://asciinema.org/a/Z8JRqIGCku5RSd4yyAIgL024C
 #аскинема установки и запуска игры brain-gcd
  https://asciinema.org/a/TgRnPX8jGSN7QyE14Lzm8RWPA
 
+#аскинема установки и запуска игры brain-progression
+https://asciinema.org/a/rIOR6Pwdt2zABkmb0X7usw3cU
+
+
 

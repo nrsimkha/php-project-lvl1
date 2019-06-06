@@ -75,11 +75,11 @@ function Calculate($number_1, $number_2, $sign)
 
 // считаем сумму, произведение или разность чисел
 function GCD($number_1, $number_2)
-{ 
+{
     $int_1 = max($number_1, $number_2);
     $int_2 = min($number_1, $number_2);
     $rem = $int_2;
-    while($int_1 % $int_2 !== 0){
+    while ($int_1 % $int_2 !== 0) {
         $rem = $int_1 % $int_2;
         //echo "int_1={$int_1} int_2={$int_2} rem={$rem} /s";
         $int_1 = $int_2;

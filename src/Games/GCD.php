@@ -12,7 +12,7 @@ function GCDGame()
     hello();
     line('Find the greatest common divisor of given numbers.');
     $first_name = run();
-    $n=0;
+    $n = 0;
     while ($n < 3) {
         $number_1 = RandomInt();
         $number_2 = RandomInt();

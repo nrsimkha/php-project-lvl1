@@ -16,3 +16,7 @@ https://asciinema.org/a/DmsCVL1GMxOrfDioA82Dry0qO
 #аскинема установки и запуска игры brain-calc
 https://asciinema.org/a/Z8JRqIGCku5RSd4yyAIgL024C
 
+#аскинема установки и запуска игры brain-gcd
+ https://asciinema.org/a/TgRnPX8jGSN7QyE14Lzm8RWPA
+
+

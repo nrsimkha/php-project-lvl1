@@ -8,8 +8,7 @@ https://asciinema.org/a/Ns0ZRCMmSkIUrucgQG0rEbIXc
 <a href="https://codeclimate.com/github/nrsimkha/php-project-lvl1/test_coverage"><img src="https://api.codeclimate.com/v1/badges/da5900d6fb5c8f9bfbeb/test_coverage" /></a>
 
 #Travis CI Badge
-https://travis-ci.org/nrsimkha/php-project-lvl1.svg?branch=master
-{<img src="https://travis-ci.org/nrsimkha/php-project-lvl1.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/nrsimkha/php-project-lvl1]
+<a href="https://travis-ci.org/nrsimkha/php-project-lvl1"><img src="https://travis-ci.org/nrsimkha/php-project-lvl1.svg?branch=master" alt="Build Status"/></a>
 
 #аскинема установки и запуска игры brain-even
 #успешно

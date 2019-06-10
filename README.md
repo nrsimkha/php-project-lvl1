@@ -9,6 +9,7 @@ https://asciinema.org/a/Ns0ZRCMmSkIUrucgQG0rEbIXc
 
 #Travis CI Badge
 https://travis-ci.org/nrsimkha/php-project-lvl1.svg?branch=master
+{<img src="https://travis-ci.org/nrsimkha/php-project-lvl1.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/nrsimkha/php-project-lvl1]
 
 #аскинема установки и запуска игры brain-even
 #успешно

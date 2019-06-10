@@ -1,38 +1,38 @@
 <?php
 namespace BrainGames\GCD;
 
-use function \cli\line;
-use function BrainGames\Cli\{run, hello};
-use function BrainGames\GameFunc\{RandomInt,question,GCD, AssumeEqual};
+use function BrainGames\GameFunc\gameStart;
+
 
 //ОСНОВНАЯ ЛОГИКА ИГРЫ____________________________
 
 function GCDGame()
 {
-    hello();
-    line('Find the greatest common divisor of given numbers.');
-    $FIRST_NAME = run();
-    $n = 0;
-    while ($n < 3) {
-        $number_1 = RandomInt();
-        $number_2 = RandomInt();
-        //$number_1 = 39;
-        //$number_2 = 80;
-        $rightAnswer = GCD($number_1, $number_2);
-        $userAnswer = question("{$number_1} {$number_2}");
-        
-        if (AssumeEqual($userAnswer, $rightAnswer)) {
-            if ($n == 2) {
-                line("Congratulations, {$FIRST_NAME}!");
-                break;
-            } else {
-                line("Correct!");
-                $n++;
-            }
-        } else {
-            line("{$userAnswer} is wrong answer ;(. Correct answer was {$rightAnswer}.");
-            line("Let's try again, {$FIRST_NAME}!");
-            break;
-        }
+    $rules = 'Find the greatest common divisor of given numbers.';
+    $gameName = 'GCD';
+    gameStart($rules, $gameName);
+}
+
+function generateGameData()
+{
+    $signs = ['+', '*', '-'];
+    $number1 = round(mt_rand(0, 100));
+    $number2 = round(mt_rand(0, 100));
+    $rightAnswer = getGCD($number1, $number2);
+    $questionStr = "{$number1} {$number2}";
+    return array($rightAnswer, $questionStr);
+}
+
+// считаем сумму, произведение или разность чисел
+function getGCD($number1, $number2)
+{
+    $maxValue = max($number1, $number2);
+    $minValue = min($number1, $number2);
+    $remainder = $minValue;
+    while ($maxValue % $minValue !== 0) {
+        $remainder = $maxValue % $minValue;
+        $maxValue = $minValue;
+        $minValue = $remainder;
     }
+    return $remainder;
 }

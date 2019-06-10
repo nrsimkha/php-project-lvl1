@@ -1,11 +1,25 @@
 <?php
 namespace BrainGames\Prime;
 
-use function \cli\line;
-use function BrainGames\Cli\{run, hello};
-use function BrainGames\GameFunc\{RandomInt,question, AssumeEqual,StdOut};
+use function BrainGames\GameFunc\gameStart;
 
 //ОСНОВНАЯ ЛОГИКА ИГРЫ____________________________
+
+function primeGame()
+{
+    $rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+    $gameName = 'Prime';
+    gameStart($rules, $gameName);
+}
+
+function generateGameData()
+{
+    $number = round(mt_rand(0, 100));
+    $rightAnswer = isPrime($number);
+    $questionStr = $number;
+    return array($rightAnswer, $questionStr);
+}
+
 function isPrime($number)
 {
     for ($i = 2; $i < $number; $i++) {
@@ -14,20 +28,4 @@ function isPrime($number)
         }
     }
     return "yes";
-}
-
-function PrimeGame()
-{
-    hello();
-    line('Answer "yes" if given number is prime. Otherwise answer "no".');
-    $FIRST_NAME = run();
-    $n = 0;
-    $number = round(mt_rand(1, 200));
-    while ($n < 3) {
-        $number = round(mt_rand(1, 200));
-        $rightAnswer = isPrime($number);
-        $userAnswer = question($number);
-        StdOut($userAnswer, $rightAnswer, $FIRST_NAME, $n);
-        $n++;
-    }
 }

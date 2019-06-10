@@ -4,11 +4,8 @@ https://asciinema.org/a/Ns0ZRCMmSkIUrucgQG0rEbIXc
 #Maintainability Badge
 <a href="https://codeclimate.com/github/nrsimkha/php-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/da5900d6fb5c8f9bfbeb/maintainability" /></a>
 
-#Test Coverage Badge
-<a href="https://codeclimate.com/github/nrsimkha/php-project-lvl1/test_coverage"><img src="https://api.codeclimate.com/v1/badges/da5900d6fb5c8f9bfbeb/test_coverage" /></a>
-
 #Travis CI Badge
-https://travis-ci.org/nrsimkha/php-project-lvl1.svg?branch=master
+<a href="https://travis-ci.org/nrsimkha/php-project-lvl1"><img src="https://travis-ci.org/nrsimkha/php-project-lvl1.svg?branch=master" alt="Build Status"/></a>
 
 #аскинема установки и запуска игры brain-even
 #успешно

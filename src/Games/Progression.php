@@ -3,30 +3,27 @@ namespace BrainGames\Progression;
 
 use function \cli\line;
 use function BrainGames\Cli\{run, hello};
-use function BrainGames\GameFunc\{RandomInt,question, AssumeEqual,StdOut};
+use function BrainGames\GameFunc\gameStart;
 
 //ОСНОВНАЯ ЛОГИКА ИГРЫ____________________________
-
+function generateGameData()
+{
+    $array = [];
+    $start = round(mt_rand(1, 100));
+    $step = round(mt_rand(1, 10));
+    $missing = round(mt_rand(0, 9));
+    for ($i = 0; $i < 10; $i++) {
+        $array[] = $start + $step * $i;
+    }
+    $rightAnswer = $array[$missing];
+    $array[$missing] = "..";
+    $questionRow = implode(' ', $array);
+    return array($rightAnswer, $questionRow);
+}
 
 function ProgressionGame()
 {
-    hello();
-    line('What number is missing in the progression?');
-    $FIRST_NAME = run();
-    $n = 0;
-    while ($n < 3) {
-        $start = round(mt_rand(1, 100));
-        $step = round(mt_rand(1, 10));
-        $array = [];
-        $missing = round(mt_rand(0, 9));
-        for ($i = 0; $i < 10; $i++) {
-            $array[] = $start + $step * $i;
-        }
-        $rightAnswer = $array[$missing];
-        $array[$missing] = "..";
-        $questionRow = implode(' ', $array);
-        $userAnswer = question($questionRow);
-        StdOut($userAnswer, $rightAnswer, $FIRST_NAME, $n);
-        $n++;
-    }
+    $rules = 'What number is missing in the progression?';
+    $gameName = 'Progression';
+    gameStart($rules, $gameName);
 }

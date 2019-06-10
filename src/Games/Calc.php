@@ -1,38 +1,40 @@
 <?php
 namespace BrainGames\Calc;
 
-use function \cli\line;
-use function BrainGames\Cli\{run, hello};
-use function BrainGames\GameFunc\{RandomInt,question,Calculate, StdOut, AssumeEqual};
+use function BrainGames\GameFunc\gameStart;
 
 //ОСНОВНАЯ ЛОГИКА ИГРЫ____________________________
 
-function CalcGame()
+function calcGame()
+{
+    $rules = 'What is the result of the expression?';
+    $gameName = 'Calc';
+    gameStart($rules, $gameName);
+}
+
+function generateGameData()
 {
     $signs = ['+', '*', '-'];
-    $n = 0;
-    hello();
-    $FIRST_NAME = run();
-    while ($n < 3) {
-        $number_1 = RandomInt();
-        $number_2 = RandomInt();
-        $sign = $signs[round(mt_rand(0, 2))];
-        $rightAnswer = Calculate($number_1, $number_2, $sign);
-        $userAnswer = question("{$number_1} {$sign} {$number_2}");
-        
-        
-        if (AssumeEqual($userAnswer, $rightAnswer)) {
-            if ($n == 2) {
-                line("Congratulations, {$FIRST_NAME}!");
-                break;
-            } else {
-                line("Correct!");
-                $n++;
-            }
-        } else {
-            line("{$userAnswer} is wrong answer ;(. Correct answer was {$rightAnswer}.");
-            line("Let's try again, {$FIRST_NAME}!");
+    $number1 = round(mt_rand(0, 100));
+    $number2 = round(mt_rand(0, 100));
+    $sign = $signs[round(mt_rand(0, 2))];
+    $rightAnswer = calculateEquationResult($number1, $number2, $sign);
+    $questionStr = "{$number1} {$sign} {$number2}";
+    return array($rightAnswer, $questionStr);
+}
+
+// считаем сумму, произведение или разность чисел
+function calculateEquationResult($number1, $number2, $operationalSign)
+{
+    switch ($operationalSign) {
+        case '+':
+            return $number1 + $number2;
             break;
-        }
+        case '-':
+            return $number1 - $number2;
+            break;
+        case '*':
+            return $number1 * $number2;
+            break;
     }
 }

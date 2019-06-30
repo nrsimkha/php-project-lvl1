@@ -4,10 +4,5 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-
 use function BrainGames\Even\EvenGame;
 EvenGame();
-//use function BrainGames\Even\question;  
-//use function BrainGames\Even\AssumeEqual;
-//question($number);
-//AssumeEqual();

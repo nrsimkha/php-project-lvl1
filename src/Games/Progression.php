@@ -9,10 +9,11 @@ use function BrainGames\GameFunc\gameStart;
 function generateGameData()
 {
     $array = [];
+    $sizeOfProgression = 10;
     $start = round(mt_rand(1, 100));
     $step = round(mt_rand(1, 10));
-    $missing = round(mt_rand(0, 9));
-    for ($i = 0; $i < 10; $i++) {
+    $missing = round(mt_rand(0, $sizeOfProgression-1));
+    for ($i = 0; $i < $sizeOfProgression; $i++) {
         $array[] = $start + $step * $i;
     }
     $rightAnswer = $array[$missing];
@@ -23,7 +24,7 @@ function generateGameData()
 
 function ProgressionGame()
 {
-    $rules = 'What number is missing in the progression?';
+    $description = 'What number is missing in the progression?';
     $gameName = 'Progression';
-    gameStart($rules, $gameName);
+    gameStart($description, $gameName);
 }

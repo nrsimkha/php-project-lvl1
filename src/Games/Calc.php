@@ -3,30 +3,32 @@ namespace BrainGames\Calc;
 
 use function BrainGames\GameFunc\gameStart;
 
+define("SIGNS", ['+', '*', '-']);
+
+
 //ОСНОВНАЯ ЛОГИКА ИГРЫ____________________________
 
 function calcGame()
 {
-    $rules = 'What is the result of the expression?';
+    $description = 'What is the result of the expression?';
     $gameName = 'Calc';
-    gameStart($rules, $gameName);
+    gameStart($description, $gameName);
 }
 
 function generateGameData()
 {
-    $signs = ['+', '*', '-'];
     $number1 = round(mt_rand(0, 100));
     $number2 = round(mt_rand(0, 100));
-    $sign = $signs[round(mt_rand(0, 2))];
+    $sign = SIGNS[round(mt_rand(0, sizeof(SIGNS)-1))];
     $rightAnswer = calculateEquationResult($number1, $number2, $sign);
-    $questionStr = "{$number1} {$sign} {$number2}";
-    return array($rightAnswer, $questionStr);
+    $question = "{$number1} {$sign} {$number2}";
+    return array($rightAnswer, $question);
 }
 
 // считаем сумму, произведение или разность чисел
-function calculateEquationResult($number1, $number2, $operationalSign)
+function calculateEquationResult($number1, $number2, $operation)
 {
-    switch ($operationalSign) {
+    switch ($operation) {
         case '+':
             return $number1 + $number2;
             break;

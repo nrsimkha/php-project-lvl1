@@ -6,21 +6,20 @@ use function BrainGames\GameFunc\gameStart;
 
 //ОСНОВНАЯ ЛОГИКА ИГРЫ____________________________
 
-function GCDGame()
+function gcdGame()
 {
-    $rules = 'Find the greatest common divisor of given numbers.';
+    $description = 'Find the greatest common divisor of given numbers.';
     $gameName = 'GCD';
-    gameStart($rules, $gameName);
+    gameStart($description, $gameName);
 }
 
 function generateGameData()
 {
-    $signs = ['+', '*', '-'];
     $number1 = round(mt_rand(0, 100));
     $number2 = round(mt_rand(0, 100));
     $rightAnswer = getGCD($number1, $number2);
-    $questionStr = "{$number1} {$number2}";
-    return array($rightAnswer, $questionStr);
+    $question = "$number1 $number2";
+    return array($rightAnswer, $question);
 }
 
 // считаем сумму, произведение или разность чисел

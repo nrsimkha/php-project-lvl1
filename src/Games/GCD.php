@@ -9,17 +9,14 @@ use function BrainGames\GameFunc\gameStart;
 function gcdGame()
 {
     $description = 'Find the greatest common divisor of given numbers.';
-    $gameName = 'GCD';
-    gameStart($description, $gameName);
-}
-
-function generateGameData()
-{
-    $number1 = round(mt_rand(0, 100));
-    $number2 = round(mt_rand(0, 100));
-    $rightAnswer = getGCD($number1, $number2);
-    $question = "$number1 $number2";
-    return array($rightAnswer, $question);
+    $generateGameData = function () {
+        $number1 = round(mt_rand(0, 100));
+        $number2 = round(mt_rand(0, 100));
+        $rightAnswer = getGCD($number1, $number2);
+        $question = "$number1 $number2";
+        return array($rightAnswer, $question);
+    };
+    gameStart($description, $generateGameData);
 }
 
 // считаем сумму, произведение или разность чисел

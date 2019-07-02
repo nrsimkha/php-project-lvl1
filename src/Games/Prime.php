@@ -9,14 +9,12 @@ function primeGame()
 {
     $description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $gameName = 'Prime';
-    gameStart($description, $gameName);
-}
-
-function generateGameData()
-{
-    $question = round(mt_rand(0, 100));
-    $rightAnswer = isPrime($question);    
-    return array($rightAnswer, $question);
+    $generateGameData = function () {
+        $question = round(mt_rand(0, 100));
+        $rightAnswer = isPrime($question);
+        return array($rightAnswer, $question);
+    };
+    gameStart($description, $generateGameData);
 }
 
 function isPrime($number)

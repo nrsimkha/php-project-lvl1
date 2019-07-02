@@ -4,24 +4,22 @@ namespace BrainGames\GameFunc;
 
 use function \cli\line;
 
-function gameStart($rules, $gameName)
+function gameStart($rules, $generateGameData)
 {
     line('Welcome to the Brain Game!!');
     line($rules);
     $userName = \cli\prompt('May I have your name please?');
     line("Hello, %s!", $userName);
-    $functionName = "BrainGames\\" . $gameName . "\\generateGameData";
     $round = 0;
-    for ($i=0; $i < 3; $i++) { 
-        $dataArray = call_user_func($functionName, '');
+    for ($i = 0; $i < 3; $i++) {
+        $dataArray = call_user_func($generateGameData, '');
         $rightAnswer = $dataArray[0];
         $questionRow = $dataArray[1];
         line("Question: {$questionRow}");
-        $userAnswer = \cli\prompt("Your answer");        
+        $userAnswer = \cli\prompt("Your answer");
         displayRoundResult($userAnswer, $rightAnswer, $userName, $round);
-        $round++;    
+        $round++;
     }
-
 }
 
 //генерация ответа игроку

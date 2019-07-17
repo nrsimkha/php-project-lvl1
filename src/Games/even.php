@@ -1,18 +1,22 @@
 <?php
 namespace BrainGames\Even;
 
-use function BrainGames\GameFunc\gameStart;
+use function BrainGames\GameLogic\gameStart;
 
 //ОСНОВНАЯ ЛОГИКА ИГРЫ____________________________
 
-function EvenGame()
+function evenGame()
 {
     $description = 'Answer "yes" if number even otherwise answer "no".';
     $generateGameData = function () {
         $integer = round(mt_rand(0, 100));
-        $rightAnswer = ($integer % 2 === 0) ? "yes" : "no";
-        $question = $integer;
-        return array($rightAnswer, $question);
+        $rightAnswer = isEven($integer) ? "yes" : "no";        
+        return array($rightAnswer, $integer);
     };
     gameStart($description, $generateGameData);
+}
+
+function isEven($number)
+{
+    return $number % 2 === 0;
 }

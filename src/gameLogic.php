@@ -1,6 +1,6 @@
 <?php
 
-namespace BrainGames\GameFunc;
+namespace BrainGames\GameLogic;
 
 use function \cli\line;
 
@@ -17,13 +17,25 @@ function gameStart($rules, $generateGameData)
         $questionRow = $dataArray[1];
         line("Question: {$questionRow}");
         $userAnswer = \cli\prompt("Your answer");
-        displayRoundResult($userAnswer, $rightAnswer, $userName, $round);
+        if ($userAnswer == $rightAnswer) {
+            if ($round == 2) {
+                line("Congratulations, {$userName}!");
+                exit;
+            } else {
+                line("Correct!");
+            }
+        } else {
+            line("{$userAnswer} is wrong answer ;(. Correct answer was {$rightAnswer}.");
+            line("Let's try again, {$userName}!");
+            exit;
+        }
+        //displayRoundResult($userAnswer, $rightAnswer, $userName, $round);
         $round++;
     }
 }
 
 //генерация ответа игроку
-function displayRoundResult($userAnswer, $rightAnswer, $userName, $round)
+/*function displayRoundResult($userAnswer, $rightAnswer, $userName, $round)
 {
     if ($userAnswer == $rightAnswer) {
         if ($round == 2) {
@@ -37,4 +49,4 @@ function displayRoundResult($userAnswer, $rightAnswer, $userName, $round)
         line("Let's try again, {$userName}!");
         exit;
     }
-}
+}*/

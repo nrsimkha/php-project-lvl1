@@ -1,3 +1,17 @@
+A collection of games to run in command line.
+
+Clone this repo to your local machine using https://github.com/nrsimkha/php-project-lvl1.git
+
+Games list
+- brain-calc (calculate equation result)
+- brain-even (check whether given number is even or odd)
+- brain-gcd (find greatest common divisor of two numbers)
+- brain-prime (check whether given number is prime or not)
+- brain-progresson (find the missing number in a progression)
+
+Start game by typing bin/'game name' in command line. Note, that your current directory shoul be inside the game folder.
+
+Рассчитать результат выражения
 # hexlet_project
 https://asciinema.org/a/Ns0ZRCMmSkIUrucgQG0rEbIXc
 

@@ -24,12 +24,12 @@
         "squizlabs/php_codesniffer": "^3.4"
     },
     "autoload": {
-        "files": ["src/Games/Even.php",
-            "src/Games/Calc.php",
-            "src/GameFunctions.php",
-            "src/Games/GCD.php",
-            "src/Games/Progression.php",
-            "src/Games/Prime.php"
+        "files": ["src/Games/even.php",
+            "src/Games/calc.php",
+            "src/gameLogic.php",
+            "src/Games/gcd.php",
+            "src/Games/progression.php",
+            "src/Games/prime.php"
         ]
     },    
     "scripts": {

@@ -7,10 +7,10 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'be01b9b16925dcb22165c40b46681ac6' => $vendorDir . '/wp-cli/php-cli-tools/lib/cli/cli.php',
-    'f8789535c80609b22e294a827b15dbcf' => $baseDir . '/src/Games/Even.php',
-    '9475cc7e877b484537e945d58b4e174a' => $baseDir . '/src/Games/Calc.php',
-    '1369f6f563d53c80394f909354e80d99' => $baseDir . '/src/GameFunctions.php',
-    'a733f022f7d7988a1f7ec773791ce18e' => $baseDir . '/src/Games/GCD.php',
-    'ce661b0ce910a0c81e323d73a6f6b6f1' => $baseDir . '/src/Games/Progression.php',
-    'bb2a1c80a0e85261e85d5a75fc3efc93' => $baseDir . '/src/Games/Prime.php',
+    '28c4b20c8c850e7052d1a5242c28f266' => $baseDir . '/src/Games/even.php',
+    '79976e5e962b2f74471a6b305a64b5c5' => $baseDir . '/src/Games/calc.php',
+    'b7471ac25a3fb2067652b947cba2715f' => $baseDir . '/src/gameLogic.php',
+    '4370ec4a92e66aef5e15cc921ed97d22' => $baseDir . '/src/Games/gcd.php',
+    'd4b9269cc966cc94370a905fefc18f82' => $baseDir . '/src/Games/progression.php',
+    'f85762af558e5c03c093759b5a022eb2' => $baseDir . '/src/Games/prime.php',
 );

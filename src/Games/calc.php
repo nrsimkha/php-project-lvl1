@@ -1,12 +1,9 @@
 <?php
 namespace BrainGames\Calc;
 
-use function BrainGames\GameFunc\gameStart;
+use function BrainGames\GameLogic\gameStart;
 
 define("SIGNS", ['+', '*', '-']);
-
-
-//ОСНОВНАЯ ЛОГИКА ИГРЫ____________________________
 
 function calcGame()
 {
@@ -15,15 +12,14 @@ function calcGame()
         $number1 = round(mt_rand(0, 100));
         $number2 = round(mt_rand(0, 100));
         $sign = SIGNS[round(mt_rand(0, sizeof(SIGNS) - 1))];
-        $rightAnswer = calculateEquationResult($number1, $number2, $sign);
+        $rightAnswer = calculateExpression($number1, $number2, $sign);
         $question = "{$number1} {$sign} {$number2}";
         return array($rightAnswer, $question);
     };
     gameStart($description, $generateGameData);
 }
 
-// считаем сумму, произведение или разность чисел
-function calculateEquationResult($number1, $number2, $operation)
+function calculateExpression($number1, $number2, $operation)
 {
     switch ($operation) {
         case '+':

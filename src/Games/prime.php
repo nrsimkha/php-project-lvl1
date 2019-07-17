@@ -5,7 +5,7 @@ use function BrainGames\GameLogic\gameStart;
 
 function primeGame()
 {
-    $description = 'Answer "yes" if given number is prime. Otherwise answer "no".';    
+    $description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $generateGameData = function () {
         $question = round(mt_rand(0, 100));
         $rightAnswer = isPrime($question) ? "yes" : "no";

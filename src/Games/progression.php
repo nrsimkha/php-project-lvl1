@@ -9,10 +9,10 @@ define("PROGRESSION_LENGHT", 10);
 function progressionGame()
 {
     $generateGameData = function () {
-        $progression = [];        
+        $progression = [];
         $start = round(mt_rand(1, 100));
         $step = round(mt_rand(1, 10));
-        $missingValue = round(mt_rand(0, PROGRESSION_LENGHT- 1));
+        $missingValue = round(mt_rand(0, PROGRESSION_LENGHT - 1));
         for ($i = 0; $i < PROGRESSION_LENGHT; $i++) {
             $progression[] = $start + $step * $i;
         }

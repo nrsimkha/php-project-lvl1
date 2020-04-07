@@ -1,24 +1,25 @@
 <?php
-namespace BrainGames\Progression;
+namespace BrainGames\progression;
 
-use function BrainGames\GameLogic\gameStart;
+use function BrainGames\GameLogic\startGame;
+
+define("DESCRIPTION_PROGRESSION", 'What number is missing in the progression?');
+define("PROGRESSION_LENGHT", 10);
 
 function progressionGame()
 {
-    $description = 'What number is missing in the progression?';
     $generateGameData = function () {
-        $progression = [];
-        $progressionLength = 10;
+        $progression = [];        
         $start = round(mt_rand(1, 100));
         $step = round(mt_rand(1, 10));
-        $missingNumber = round(mt_rand(0, $progressionLength - 1));
-        for ($i = 0; $i < $progressionLength; $i++) {
+        $missingValue = round(mt_rand(0, PROGRESSION_LENGHT- 1));
+        for ($i = 0; $i < PROGRESSION_LENGHT; $i++) {
             $progression[] = $start + $step * $i;
         }
-        $rightAnswer = $progression[$missingNumber];
-        $progression[$missingNumber] = "..";
+        $rightAnswer = $progression[$missingValue];
+        $progression[$missingValue] = "..";
         $question = implode(' ', $progression);
         return array($rightAnswer, $question);
     };
-    gameStart($description, $generateGameData);
+    startGame(DESCRIPTION_PROGRESSION, $generateGameData);
 }

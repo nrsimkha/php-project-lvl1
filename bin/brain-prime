@@ -4,5 +4,5 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use function BrainGames\Prime\PrimeGame;
+use function BrainGames\prime\primeGame;
 primeGame();

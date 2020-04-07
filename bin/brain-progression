@@ -4,5 +4,5 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use function BrainGames\Progression\ProgressionGame;
+use function BrainGames\progression\progressionGame;
 progressionGame();

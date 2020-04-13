@@ -1,3 +1,11 @@
+BrainGames
+
+#Maintainability Badge
+<a href="https://codeclimate.com/github/nrsimkha/php-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/da5900d6fb5c8f9bfbeb/maintainability" /></a>
+
+#Travis CI Badge
+<a href="https://travis-ci.org/nrsimkha/php-project-lvl1"><img src="https://travis-ci.org/nrsimkha/php-project-lvl1.svg?branch=master" alt="Build Status"/></a>
+
 A collection of games to run in command line.
 
 Clone this repo to your local machine using https://github.com/nrsimkha/php-project-lvl1.git
@@ -18,11 +26,7 @@ Start game by typing bin/'game name' in command line. Note, that your current di
 # hexlet_project
 https://asciinema.org/a/Ns0ZRCMmSkIUrucgQG0rEbIXc
 
-#Maintainability Badge
-<a href="https://codeclimate.com/github/nrsimkha/php-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/da5900d6fb5c8f9bfbeb/maintainability" /></a>
 
-#Travis CI Badge
-<a href="https://travis-ci.org/nrsimkha/php-project-lvl1"><img src="https://travis-ci.org/nrsimkha/php-project-lvl1.svg?branch=master" alt="Build Status"/></a>
 
 #аскинема установки и запуска игры brain-even
 #успешно

@@ -1,7 +1,8 @@
 <?php
-namespace BrainGames\calc;
 
-use function BrainGames\GameLogic\startGame;
+namespace BrainGames\Games\calc;
+
+use function BrainGames\engine\startGame;
 
 define("SIGNS", ['+', '*', '-']);
 define("DESCRIPTION_CALC", 'What is the result of the expression?');
@@ -11,7 +12,7 @@ function calcGame()
     $generateGameData = function () {
         $a = round(mt_rand(0, 100));
         $b = round(mt_rand(0, 100));
-        $sign = SIGNS[round(mt_rand(0, sizeof(SIGNS) - 1))];
+        $sign = SIGNS[array_rand(SIGNS, 1)];
         $rightAnswer = calculateExpression($a, $b, $sign);
         $question = "{$a} {$sign} {$b}";
         return array($rightAnswer, $question);

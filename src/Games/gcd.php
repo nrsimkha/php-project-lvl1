@@ -1,7 +1,8 @@
 <?php
-namespace BrainGames\gcd;
 
-use function BrainGames\GameLogic\startGame;
+namespace BrainGames\Games\gcd;
+
+use function BrainGames\engine\startGame;
 
 define("DESCRIPTION_GCD", 'Find the greatest common divisor of given numbers.');
 

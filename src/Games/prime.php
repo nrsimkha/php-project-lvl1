@@ -1,7 +1,8 @@
 <?php
-namespace BrainGames\prime;
 
-use function BrainGames\GameLogic\startGame;
+namespace BrainGames\Games\prime;
+
+use function BrainGames\engine\startGame;
 
 define("DESCRIPTION_PRIME", 'Answer "yes" if given number is prime. Otherwise answer "no".');
 

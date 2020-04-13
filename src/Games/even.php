@@ -1,7 +1,8 @@
 <?php
-namespace BrainGames\even;
 
-use function BrainGames\GameLogic\startGame;
+namespace BrainGames\Games\even;
+
+use function BrainGames\engine\startGame;
 
 define("DESCRIPTION_EVEN", 'Answer "yes" if number even otherwise answer "no".');
 

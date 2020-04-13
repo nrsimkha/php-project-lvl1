@@ -2,6 +2,9 @@ A collection of games to run in command line.
 
 Clone this repo to your local machine using https://github.com/nrsimkha/php-project-lvl1.git
 
+To install game BrainGames on your computer run the following from a command line:
+composer create-project sveta/hexlet_project1
+
 Games list
 - brain-calc (calculate equation result)
 - brain-even (check whether given number is even or odd)
